@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Umer Kalaniya - XR Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0d0f1a;
+            color: #d1d5db;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .section-header {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #4fd1c5, transparent);
+            border-radius: 9999px;
+        }
+        .tech-chip {
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid #4fd1c5;
+            color: #4fd1c5;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .tech-chip:hover {
+            background: rgba(45, 212, 191, 0.3);
+            transform: translateY(-2px);
+        }
+        /* Custom card styling for the main project container */
+        .project-container-card {
+             background: rgba(22, 24, 39, 0.7);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        /* Custom list item for projects */
+        .project-list-item {
+            cursor: pointer;
+            padding: 1rem 0;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+            transition: background-color 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-list-item:hover {
+            background-color: rgba(45, 212, 191, 0.05);
+        }
+        .project-list-item:last-child {
+            border-bottom: none;
+        }
+        /* Active filter button in the new vertical nav */
+        .filter-btn-new.active {
+            background-color: #4fd1c5;
+            color: #0d0f1a;
+            font-weight: 700;
+            border-radius: 0.5rem;
+        }
+        /* Iframe styling for embedded YouTube videos */
+        .video-embed-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 2px solid #4fd1c5;
+        }
+        .video-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+         .work-card {
+            background: rgba(22, 24, 39, 0.7);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .work-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12">
+    <div class="container mx-auto">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 pb-8 border-b-2 border-slate-700">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 tracking-wider">
+                MOHAMMED UMER KALANIYA
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-400 font-medium uppercase tracking-wide">Senior XR Developer</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mt-4 text-slate-500">
+                <a href="tel:+919022248150" class="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9022248150</span>
+                </a>
+                <a href="mailto:umerkalaniya@gmail.com" class="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                    <span>umerkalaniya@gmail.com</span>
+                </a>
+                <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                    <span>Github</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- About Me Section - NEW SECTION -->
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 section-header text-cyan-400">ABOUT ME</h2>
+            <div class="work-card rounded-xl p-6 text-slate-300 space-y-4">
+                <p>I am a highly motivated and innovative **Senior XR Developer** with a specialization in creating immersive Virtual, Augmented, and Mixed Reality (VR/AR/MR) training and simulation solutions using the **Unity game engine** and **C#**. I possess a proven track record of successfully delivering complex projects for clients like Indian Railways, Royal Canin, and TATA.</p>
+                <p>My expertise lies in translating real-world requirements into engaging interactive experiences, focusing on performance, realism, and user feedback systems. I am passionate about leveraging XR technology to solve industrial challenges, enhance learning, and drive next-generation user experiences.</p>
+            </div>
+        </section>
+
+        <!-- Work Experience Section (retained the card class for consistency) -->
+        <section id="experience" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 section-header text-cyan-400">WORK EXPERIENCE</h2>
+            
+            <!-- Senior XR Developer -->
+            <div class="mb-6 work-card rounded-xl p-6">
+                <div class="flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <h3 class="text-xl font-semibold text-emerald-400">Senior XR Developer | Parallax Labs</h3>
+                    <span class="text-sm font-medium text-slate-400">January, 2024 – Present</span>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-slate-300 space-y-2">
+                    <li>Designed and developed a multi-level VR/MR fire safety training system for Indian Railways including extinguisher handling, emergency protocols, real-time feedback, performance scoring, and a Mixed Reality experience using physical fire extinguishers for realistic interaction inside actual train environments.</li>
+                    <li>Created an interactive VR fire safety training module for Royal Canin. Focused on individual response in a workplace fire scenario. Users navigate through a guided emergency workflow, identify fire types, select appropriate extinguishers, and complete the task within a time limit. The system tracks performance and provides detailed feedback for improvement.</li>
+                    <li>Developed a Mixed Reality project for Tata battery installation where users learn the battery installation process. The experience uses hand tracking for interactive, hands-on guidance.</li>
+                </ul>
+            </div>
+
+            <!-- Associate XR Developer -->
+            <div class="mb-6 work-card rounded-xl p-6">
+                <div class="flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <h3 class="text-xl font-semibold text-emerald-400">Associate XR Developer | Parallax Labs</h3>
+                    <span class="text-sm font-medium text-slate-400">May, 2023 – Dec, 2023</span>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-slate-300 space-y-2">
+                    <li>Developed an Augmented Reality application in Unity for iPad, enabling users to spawn a car on a marker, scale and rotate it, and activate a transparency mode to visualize internal components like the engine. (Harper Adams AR)</li>
+                </ul>
+            </div>
+
+            <!-- XR Developer Intern -->
+            <div class="work-card rounded-xl p-6">
+                <div class="flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <h3 class="text-xl font-semibold text-emerald-400">XR Developer Intern | Parallax Labs</h3>
+                    <span class="text-sm font-medium text-slate-400">Nov, 2022 – Apr, 2023</span>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-slate-300 space-y-2">
+                    <li>Gained practical experience in interactive and immersive environments through the development of small 2D and 3D games and work on VR projects.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section - NEW FORMAT -->
+        <section id="projects" class="mb-12">
+            <!-- Title adapted to 'MY WORK' as seen in the image -->
+            <h2 class="text-3xl font-bold mb-6 section-header text-cyan-400">MY WORK</h2> 
+            
+            <div class="project-container-card rounded-xl p-0 overflow-hidden flex flex-col md:flex-row min-h-[400px]">
+                
+                <!-- Left Column: Filter/Nav (md:w-1/4, w-full on mobile) -->
+                <div id="project-filter-nav" class="md:w-1/4 w-full bg-slate-900/50 p-4 border-b md:border-b-0 md:border-r border-slate-700/50">
+                    <h3 class="text-lg font-semibold mb-3 text-cyan-300 md:hidden">Filter Projects</h3>
+                    <div class="flex md:flex-col flex-wrap gap-2 md:gap-1">
+                        <!-- Filter buttons will be generated by JS -->
+                        <button class="filter-btn-new active text-left px-3 py-2 text-slate-300 hover:bg-cyan-600 hover:text-white transition-colors duration-300 font-medium" data-category="all">All Work</button>
+                        <button class="filter-btn-new text-left px-3 py-2 text-slate-300 hover:bg-cyan-600 hover:text-white transition-colors duration-300 font-medium" data-category="VR">VR</button>
+                        <button class="filter-btn-new text-left px-3 py-2 text-slate-300 hover:bg-cyan-600 hover:text-white transition-colors duration-300 font-medium" data-category="AR">AR</button>
+                        <button class="filter-btn-new text-left px-3 py-2 text-slate-300 hover:bg-cyan-600 hover:text-white transition-colors duration-300 font-medium" data-category="MR">MR</button>
+                        <button class="filter-btn-new text-left px-3 py-2 text-slate-300 hover:bg-cyan-600 hover:text-white transition-colors duration-300 font-medium" data-category="GameDev">Game Dev</button>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Project List & Detail View Container (md:w-3/4, w-full on mobile) -->
+                <div class="md:w-3/4 w-full p-4 relative">
+                    
+                    <!-- Project List View (Default View) -->
+                    <div id="project-list-view" class="h-full">
+                        <!-- List of projects goes here -->
+                        <ul id="project-list" class="space-y-0">
+                            <!-- Dynamically generated list items will appear here -->
+                        </ul>
+                        <!-- Fallback message if no projects are found -->
+                        <div id="no-projects-message" class="hidden text-center text-slate-500 pt-10">
+                            No projects found for this category.
+                        </div>
+                    </div>
+                    
+                    <!-- Project Detail View (Hidden until a project is clicked) -->
+                    <div id="project-detail-view" class="h-full hidden">
+                        <!-- Close Button -->
+                        <button id="close-detail-btn" class="absolute top-4 right-4 text-slate-400 hover:text-cyan-400 transition-colors p-2 text-3xl font-light">
+                            &times;
+                        </button>
+
+                        <div class="max-w-xl mx-auto pt-6 pb-4">
+                            <!-- Project Media (Video/Embed) -->
+                            <div id="detail-media" class="video-embed-container mb-4">
+                                <!-- YouTube iframe will be inserted here -->
+                            </div>
+                            
+                            <!-- Project Title & Description -->
+                            <h3 id="detail-title" class="text-3xl font-semibold text-emerald-400 mb-2"></h3>
+                            <p id="detail-description" class="text-slate-300 mb-4"></p>
+                            
+                            <!-- External Link -->
+                            <a id="detail-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-600 text-white px-6 py-2 rounded-full font-medium hover:bg-cyan-500 transition-colors text-sm">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 section-header text-cyan-400">SKILLS</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">C#</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">JAVA</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Unity</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Unity(2D,3D,XR)</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">VR/AR Headsets</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">ARkit</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">ARCore</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Vuforia</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Open XR</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Lens Studio</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Firebase</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Blender</span>
+                <span class="tech-chip px-4 py-2 rounded-full font-medium">Android</span>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 section-header text-cyan-400">EDUCATION </h2>
+             
+            <!-- Master's Degree -->
+            <div class="mb-6 work-card rounded-xl p-6">
+                <div class="flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <h3 class="text-xl font-semibold text-emerald-400">Maharashtra College of Arts Science and Commerce</h3>
+                    <span class="text-sm font-medium text-slate-400">2020-2022</span>
+                </div>
+                <p class="text-slate-300">Master of Science in Information Technology</p>
+                <p class="text-slate-400 mt-1">CGPA: 8.0/10</p>
+            </div>
+
+            <!-- Bachelor's Degree -->
+            <div class="work-card rounded-xl p-6">
+                <div class="flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <h3 class="text-xl font-semibold text-emerald-400">Maharashtra College of Arts Science and Commerce</h3>
+                    <span class="text-sm font-medium text-slate-400">2018-2020</span>
+                </div>
+                <p class="text-slate-300">Bachelor of Science in Information Technology</p>
+                <p class="text-slate-400 mt-1">CGPA: 7.4/10</p>
+            </div>
+        </section>
+
+        <!-- Download Resume Section - NEW SECTION -->
+        <section id="resume" class="mb-12 text-center">
+            <h2 class="text-3xl font-bold mb-6 section-header mx-auto w-fit text-cyan-400">DOWNLOAD RESUME</h2>
+            <a href="https://placeholder.com/your-resume-link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-emerald-500 text-white text-xl font-bold px-10 py-4 rounded-xl shadow-lg hover:bg-emerald-400 transition-colors transform hover:scale-[1.02] active:scale-[0.98]">
+                <i class="fas fa-file-arrow-down fa-lg"></i>
+                <span>Get My Full CV</span>
+            </a>
+            <p class="text-slate-500 mt-4 text-sm">Please update the link (`https://placeholder.com/your-resume-link`) to point to your actual PDF file.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-600 text-sm mt-12 pt-8 border-t border-slate-700">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Mohammed Umer Kalaniya. All rights reserved.</p>
+        </footer>
+
+    </div>
+    <script>
+        // --- Project Data Array ---
+        // 'Dorona Game' has been removed as requested.
+        const projects = [
+            {
+                id: 'railways-fire-safety',
+                title: 'Indian Railways VR/MR Fire Safety Training',
+                description: 'A multi-level training system for Indian Railways. The experience covers proper extinguisher handling, emergency protocols, and provides real-time feedback and performance scores. A unique Mixed Reality component allows for interaction with physical fire extinguishers within the actual train environment, enhancing realism and muscle memory.',
+                categories: ['VR', 'MR'],
+                link: 'https://youtube.com/shorts/VEg9QRbBgeg',
+                videoUrl: 'https://www.youtube.com/embed/VEg9QRbBgeg?rel=0&autoplay=1', // YouTube Short ID: VEg9QRbBgeg
+            },
+            {
+                id: 'royal-canin-vr',
+                title: 'Royal Canin VR Fire Safety Module',
+                description: 'This VR module simulates a workplace fire scenario. Users are guided through a step-by-step emergency workflow, from identifying the type of fire to selecting and using the correct extinguisher. The system tracks time and provides detailed feedback to help users improve their response time and accuracy.',
+                categories: ['VR'],
+                link: '#',
+                videoUrl: 'https://www.youtube.com/embed/Xs7L87eY9W4?rel=0&autoplay=1', // Using one of your provided links as a placeholder video
+            },
+            {
+                id: 'tata-battery-mr',
+                title: 'TATA Battery Installation MR Project',
+                description: 'An interactive Mixed Reality application designed for learning the complex process of battery installation. It leverages hand tracking technology to provide users with an intuitive, hands-on, and guided experience, making a technical task more accessible and engaging.',
+                categories: ['MR'],
+                link: 'https://youtu.be/Xs7L87eY9W4',
+                videoUrl: 'https://www.youtube.com/embed/Xs7L87eY9W4?rel=0&autoplay=1', // YouTube ID: Xs7L87eY9W4
+            },
+            {
+                id: 'harper-adams-ar',
+                title: 'Harper Adams AR Application',
+                description: 'Developed an AR application for iPad where users can spawn a 3D car model by targeting a physical marker. The user can scale and rotate the car, and an X-ray mode allows them to visualize and explore its internal components, such as the engine and chassis.',
+                categories: ['AR'],
+                link: 'https://youtube.com/shorts/NKWAk6YVNOI',
+                videoUrl: 'https://www.youtube.com/embed/NKWAk6YVNOI?rel=0&autoplay=1', // YouTube Short ID: NKWAk6YVNOI
+            }
+        ];
+
+        // Helper function to extract YouTube ID from various URLs
+        function getYouTubeId(url) {
+            if (!url) return null;
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            if (match && match[2].length === 11) {
+                return match[2];
+            }
+            return null;
+        }
+
+        // --- DOM Elements ---
+        const filterButtons = document.querySelectorAll('.filter-btn-new');
+        const projectListContainer = document.getElementById('project-list');
+        const projectListView = document.getElementById('project-list-view');
+        const projectDetailView = document.getElementById('project-detail-view');
+        const detailTitle = document.getElementById('detail-title');
+        const detailDescription = document.getElementById('detail-description');
+        const detailMedia = document.getElementById('detail-media');
+        const detailLink = document.getElementById('detail-link');
+        const closeDetailBtn = document.getElementById('close-detail-btn');
+        const noProjectsMessage = document.getElementById('no-projects-message');
+
+
+        // --- Functions ---
+
+        // Function to render the project list based on the selected category
+        function renderProjectList(category) {
+            projectListContainer.innerHTML = '';
+            let projectFound = false;
+
+            const filteredProjects = projects.filter(project => {
+                return category === 'all' || project.categories.includes(category);
+            });
+
+            if (filteredProjects.length === 0) {
+                 noProjectsMessage.classList.remove('hidden');
+            } else {
+                noProjectsMessage.classList.add('hidden');
+                
+                filteredProjects.forEach(project => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'project-list-item';
+                    listItem.dataset.projectId = project.id;
+                    // The 'View' button now triggers the detail view
+                    listItem.innerHTML = `
+                        <span class="text-lg text-slate-200">${project.title}</span>
+                        <span class="bg-cyan-600 text-white px-4 py-1.5 rounded-full font-medium transition-colors text-sm shadow-md">
+                            View
+                        </span>
+                    `;
+
+                    // We add a click listener to show the detail view regardless of where on the item is clicked.
+                    listItem.addEventListener('click', () => {
+                        showProjectDetail(project);
+                    });
+                    
+                    projectListContainer.appendChild(listItem);
+                    projectFound = true;
+                });
+            }
+        }
+
+        // Function to show the detailed view of a project
+        function showProjectDetail(project) {
+            // Hide the list view and show the detail view
+            projectListView.classList.add('hidden');
+            projectDetailView.classList.remove('hidden');
+
+            detailTitle.textContent = project.title;
+            detailDescription.textContent = project.description;
+            // This is the link that still goes to the external source (YouTube)
+            detailLink.href = project.link;
+
+            // Handle the media embed
+            const youtubeId = getYouTubeId(project.videoUrl) || getYouTubeId(project.link);
+            if (youtubeId) {
+                // Construct the YouTube embed iframe
+                detailMedia.innerHTML = `
+                    <iframe 
+                        src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        title="${project.title} Video Preview"
+                    ></iframe>
+                `;
+            } else {
+                 // Fallback for non-YouTube links
+                 detailMedia.innerHTML = `
+                    <div class="h-full flex items-center justify-center bg-slate-800 text-slate-400">
+                        <i class="fas fa-video mr-2"></i> No video preview available for this project.
+                    </div>
+                `;
+            }
+        }
+        
+        // Function to hide the detailed view and show the list
+        function hideProjectDetail() {
+            projectDetailView.classList.add('hidden');
+            projectListView.classList.remove('hidden');
+            // Stop video playback when closing
+             detailMedia.innerHTML = '';
+        }
+
+
+        // --- Event Listeners ---
+
+        // 1. Filter Button Clicks
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const category = button.getAttribute('data-category');
+                
+                // Ensure we are back on the list view when a filter is clicked
+                if (projectDetailView.classList.contains('hidden') === false) {
+                     hideProjectDetail();
+                }
+
+                renderProjectList(category);
+            });
+        });
+
+        // 2. Close Detail Button
+        closeDetailBtn.addEventListener('click', hideProjectDetail);
+
+
+        // --- Initialization ---
+        // Render the initial list on page load (All Work)
+        window.onload = function() {
+            renderProjectList('all');
+        }
+
+    </script>
+</body>
+</html>
